@@ -256,6 +256,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1108004993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771907749}
+--- !u!114 &1108004994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108004993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcb173b31b9fce4db93ad6d271556e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 10
+--- !u!1001 &1760624800
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_Name
+      value: BetterCube (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1760624801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 1760624800}
+--- !u!114 &1760624802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760624801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcb173b31b9fce4db93ad6d271556e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 10
 --- !u!1001 &1771907749
 Prefab:
   m_ObjectHideFlags: 0
@@ -295,10 +375,69 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
-      propertyPath: m_IsActive
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1856937664
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
+      propertyPath: m_Name
+      value: BetterCube (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367c6cd90cb3e04abce29dd6ff02b49, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1856937665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1598891558045578, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 1856937664}
+--- !u!114 &1856937666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856937665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcb173b31b9fce4db93ad6d271556e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 10
