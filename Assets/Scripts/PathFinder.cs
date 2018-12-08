@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathFinder : MonoBehaviour
+public class Pathfinder : MonoBehaviour
 {
     [SerializeField] Waypoint startWaypoint, endWaypoint;
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
+    Queue<Waypoint> queue = new Queue<Waypoint>();
+    [SerializeField] bool isRunning = true; // todo make private
+
     Vector2Int[] directions =
     {
         Vector2Int.up,
@@ -21,8 +24,32 @@ public class PathFinder : MonoBehaviour
     {
         LoadBlocks();
         ColorStartAndEnd();
-        ExploreNeighbours();
+        Pathfind();
+        //ExploreNeighbours();
 	}
+
+    private void Pathfind()
+    {
+        queue.Enqueue(startWaypoint);
+
+        while (queue.Count > 0)
+        {
+            var searchCenter = queue.Dequeue();
+            print("Searching from " + searchCenter); // todo remove log later
+            HaltIfEndFound(searchCenter);
+        }
+
+        print("Finished pathfinding?");
+    }
+
+    private void HaltIfEndFound(Waypoint searchCenter)
+    {
+        if (searchCenter == endWaypoint)
+        {
+            print("Searching from end node, therfore stopping"); // todo remove log later
+            isRunning = false;
+        }
+    }
 
     private void ExploreNeighbours()
     {

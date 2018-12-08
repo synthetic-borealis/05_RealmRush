@@ -301,12 +301,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
     type: 2}
   m_PrefabInternal: {fileID: 294244250}
---- !u!114 &405471898 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114268350576412206, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
-    type: 2}
-  m_PrefabInternal: {fileID: 534466147}
-  m_Script: {fileID: 11500000, guid: 6504b6d95ea88ad41972b0d64ec36411, type: 3}
 --- !u!1001 &534466147
 Prefab:
   m_ObjectHideFlags: 0
@@ -628,6 +622,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
     type: 2}
   m_PrefabInternal: {fileID: 700454401}
+--- !u!114 &721164195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114268350576412206, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771907749}
+  m_Script: {fileID: 11500000, guid: 6504b6d95ea88ad41972b0d64ec36411, type: 3}
 --- !u!1001 &875967339
 Prefab:
   m_ObjectHideFlags: 0
@@ -689,6 +689,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
     type: 2}
   m_PrefabInternal: {fileID: 875967339}
+--- !u!114 &886126942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114268350576412206, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 1144224853}
+  m_Script: {fileID: 11500000, guid: 6504b6d95ea88ad41972b0d64ec36411, type: 3}
 --- !u!1001 &908022541
 Prefab:
   m_ObjectHideFlags: 0
@@ -925,8 +931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ca48c427018d4c90f99921d1441a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaypoint: {fileID: 2131244614}
-  endWaypoint: {fileID: 405471898}
+  startWaypoint: {fileID: 721164195}
+  endWaypoint: {fileID: 886126942}
+  isRunning: 1
 --- !u!1001 &1771907749
 Prefab:
   m_ObjectHideFlags: 0
@@ -1105,9 +1112,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4632227384182432, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
     type: 2}
   m_PrefabInternal: {fileID: 2019648996}
---- !u!114 &2131244614 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114268350576412206, guid: 2367c6cd90cb3e04abce29dd6ff02b49,
-    type: 2}
-  m_PrefabInternal: {fileID: 2019648996}
-  m_Script: {fileID: 11500000, guid: 6504b6d95ea88ad41972b0d64ec36411, type: 3}
