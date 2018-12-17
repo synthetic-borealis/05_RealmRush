@@ -7,21 +7,40 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] Transform objectToPan;
     [SerializeField] Transform targetEnemy;
-    [SerializeField] GameObject gun;
-
-    private bool isFiring = true;
+    [SerializeField] ParticleSystem weaponParticles;
+    [SerializeField] float attackRange = 10f;
 
 	// Update is called once per frame
 	void Update()
     {
-        objectToPan.LookAt(targetEnemy);
-        ProcessFiring();
+        if (targetEnemy)
+        {
+            objectToPan.LookAt(targetEnemy);
+            FireAtEnemy();
+        }
+        else
+        {
+            Shoot(false);
+        }
 	}
 
-    private void ProcessFiring()
+    private void FireAtEnemy()
     {
-        ParticleSystem.EmissionModule gunEmmision = gun.GetComponent<ParticleSystem>().emission;
+        float distanceToEnemy = Vector3.Distance(targetEnemy.transform.position, gameObject.transform.position);
 
-        gunEmmision.enabled = isFiring;
+        if (distanceToEnemy <= attackRange)
+        {
+            Shoot(true);
+        }
+        else
+        {
+            Shoot(false);
+        }
+    }
+
+    private void Shoot(bool isActive)
+    {
+        ParticleSystem.EmissionModule weaponEmmission = weaponParticles.emission;
+        weaponEmmission.enabled = isActive;
     }
 }
