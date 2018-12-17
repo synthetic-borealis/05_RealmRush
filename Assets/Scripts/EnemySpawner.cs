@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] EnemyMovement enemyPrefab;
-    [SerializeField] float secondsBetweenSpawning = 5f;
+    [Range(0.1f, 120f)] [SerializeField] float secondsBetweenSpawning = 5f;
 
     // Start is called before the first frame update
     void Start()
