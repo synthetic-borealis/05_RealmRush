@@ -9,6 +9,7 @@ public class Waypoint : MonoBehaviour
     // public is ok since it's a data class
     public bool isExplored = false;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
 
     Vector2Int gridPos;
 
@@ -35,7 +36,18 @@ public class Waypoint : MonoBehaviour
 
     void OnMouseOver()
     {
-        print(gameObject.name);
+        // detect mouse click
+        if (Input.GetMouseButtonDown(0)) // left click
+        {
+            if (isPlaceable)
+            {
+                print(gameObject.name + " tower placement");
+            }
+            else
+            {
+                print(gameObject.name + " is not placeable");
+            }
+        }
     }
 
     private void Update()
