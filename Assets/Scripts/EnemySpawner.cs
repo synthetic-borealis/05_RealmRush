@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] EnemyMovement enemyPrefab;
     [Range(0.1f, 120f)] [SerializeField] float secondsBetweenSpawning = 5f;
+    [SerializeField] Transform deathFXParentTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
         {
             EnemyMovement newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             newEnemy.transform.parent = transform;
+            newEnemy.GetComponent<EnemyDamage>().deathFXParentTransform = deathFXParentTransform;
             yield return new WaitForSeconds(secondsBetweenSpawning);
         }
     }

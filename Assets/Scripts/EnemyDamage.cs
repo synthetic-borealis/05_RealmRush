@@ -9,6 +9,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] int hitPoints = 10;
     [SerializeField] ParticleSystem deathFX;
     [SerializeField] ParticleSystem hitParticles;
+    public Transform deathFXParentTransform;
 
     private void Start()
     {
@@ -33,8 +34,12 @@ public class EnemyDamage : MonoBehaviour
     private void KillEnemy()
     {
         ParticleSystem fx = Instantiate(deathFX, collisionMesh.transform.position, Quaternion.identity);
+        fx.transform.parent = deathFXParentTransform;
         fx.Play();
+        Destroy(fx.gameObject, fx.main.duration);
         // todo Add explosion sound
+
+        // destroy particle after delay
         Destroy(gameObject);
     }
 }
