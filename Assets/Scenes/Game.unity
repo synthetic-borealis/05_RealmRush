@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4552857509532619509, guid: 04f81ff9814844ccfa08226f8d46a3f4,
     type: 3}
-  secondsBetweenSpawning: 5
+  secondsBetweenSpawning: 0.75
   deathFXParentTransform: {fileID: 1566637605}
 --- !u!1001 &94308483
 PrefabInstance:

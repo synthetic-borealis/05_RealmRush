@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
             EnemyMovement newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             newEnemy.transform.parent = transform;
             newEnemy.GetComponent<EnemyDamage>().deathFXParentTransform = deathFXParentTransform;
+            newEnemy.GetComponent<EnemyMovement>().deathFXParentTransform = deathFXParentTransform;
             yield return new WaitForSeconds(secondsBetweenSpawning);
         }
     }
