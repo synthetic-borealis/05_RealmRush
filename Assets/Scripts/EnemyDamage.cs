@@ -10,14 +10,19 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] ParticleSystem deathParticlePrefab;
     [SerializeField] ParticleSystem hitParticles;
     public Transform deathFXParentTransform;
+    [SerializeField] AudioClip enemyHitSFX;
+    public AudioClip enemyDeathSFX;
+
+    AudioSource audioSource;
 
     private void Start()
     {
-        //AddNonTriggerCollider();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnParticleCollision(GameObject other)
     {
+        audioSource.PlayOneShot(enemyHitSFX);
         ProcessHit();
         if (hitPoints <= 0)
         {
@@ -36,8 +41,9 @@ public class EnemyDamage : MonoBehaviour
         ParticleSystem fx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
         fx.transform.parent = deathFXParentTransform;
         fx.Play();
+
         Destroy(fx.gameObject, fx.main.duration);
-        // todo Add explosion sound
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
 
         // destroy particle after delay
         Destroy(gameObject);

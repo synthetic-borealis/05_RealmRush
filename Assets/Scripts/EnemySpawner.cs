@@ -9,7 +9,10 @@ public class EnemySpawner : MonoBehaviour
     [Range(0.1f, 120f)] [SerializeField] float secondsBetweenSpawning = 5f;
     [SerializeField] Transform deathFXParentTransform;
     [SerializeField] Text spawnedEnemies;
+    [SerializeField] AudioClip spawnedEnemySFX;
     int score = 0;
+
+    //AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
         while (true) // loop forever
         {
             AddScore();
+            GetComponent<AudioSource>().PlayOneShot(spawnedEnemySFX);
             EnemyMovement newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             newEnemy.transform.parent = transform;
             newEnemy.GetComponent<EnemyDamage>().deathFXParentTransform = deathFXParentTransform;

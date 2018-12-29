@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float movementPeriod = .5f;
     [SerializeField] ParticleSystem goalParticles;
     public Transform deathFXParentTransform;
+    //[SerializeField] AudioClip enemySelfDestructSFX;
 
     // Use this for initialization
     void Start()
